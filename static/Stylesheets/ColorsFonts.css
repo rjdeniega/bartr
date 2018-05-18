@@ -1,0 +1,41 @@
+
+:root {
+    --pinkish: rgba(237, 72, 124, 1);
+    --orange: rgba(239, 140, 60, 1);
+    --ROgradient: -webkit-linear-gradient(left, #ef923c, #2569d8);
+    --lightbl: #5679c1;
+    --blu: rgba(52, 138, 230, 1);
+    --pastelgreen: rgba(114, 234, 121, 1);
+    --pastelblue: rgba(109, 151, 255, 1);
+    --subtleblue: rgba(109, 151, 255, 0.9);
+    --gray: rgba(59, 62, 67, 1);
+    --red: rgba(255, 4, 85, 0.8);
+    --navBG: rgba(40, 44, 53, 0.9);
+    --purple: rgba(124,37,248,1);
+    --subtlered: rgba(204,55,61,1);
+    --darkgray: rgba(29, 30, 31, 1);
+    --darkblue: #3a4d83;
+    --brightred: #f03e60;
+    --grayish: #edb7b7;
+    --hoverred: #a54b4b
+
+
+
+}
+@font-face{
+    font-family: "SFUIDisplay-Bold";
+    src: url("../Fonts/SFUIDisplay-Bold.ttf");
+}
+@font-face{
+    font-family:"SFUIDisplay-Thin";
+    src: url("../Fonts/SFUIDisplay-Ultralight.ttf");
+}
+@font-face{
+    font-family:'SFUIDisplay-Regular';
+    src: url("../Fonts/SFUIDisplay-Semibold.ttf");
+}
+@font-face{
+    font-family:'SFUIDisplay-Black';
+    src: url("../Fonts/SFUIDisplay-Thin.ttf");
+}
+

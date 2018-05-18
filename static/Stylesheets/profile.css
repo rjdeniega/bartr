@@ -1,0 +1,983 @@
+
+body {
+    font-family: "SFUIDisplay-Thin", "SF UI Display", "Helvetica Neue", -apple-system, BlinkMacSystemFont, sans-serif;
+    /*background-color:#e1e1e1;*/
+    /*background-image: url('../Resources/header-bg.png');*/
+    /*background: url('../Resources/landscape.jpg') no-repeat center center fixed;*/
+    background: #fafafa;
+    background-size: cover;
+    margin: 0;
+    width: auto;
+    min-width: 1300px;
+    min-height: 500px;
+
+}
+
+#bodyoverlay {
+
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    /*background : -webkit-linear-gradient(left, var(--pastelblue), var(--red));*/
+    /*background: rgba(109, 151, 255, 0.5);*/
+    background: #fafafa;
+    /*background: rgba(12,31,39,0.8);*/
+    z-index: -999;
+
+}
+
+#navBar {
+    /*background-color: rgba(40, 44, 53, 0.9);*/
+    /*background-color: rgba(0, 6, 0, 0.8);*/
+    background-color: #fafafa;
+    /*background:-webkit-linear-gradient(left,rgba(40,44,53,1) ,rgba(59,62,67,0.5) );*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /*background-color:#3b3e43;*/
+    width: 100%;
+    height: 80px;
+    z-index: 50;
+    min-width: 1300px;
+    /*border-bottom: 1px solid rgba(0,0,0,.0975);*/
+    border-bottom: 1px solid rgba(0,0,0,.0975);
+    /*border-bottom : 5px -webkit-linear-gradient(left, var(--pastelblue), var(--red));*/
+
+}
+
+.contents {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    left: 7%;
+    display: inline-block;
+    min-width: 1300px;
+}
+
+.contents button {
+    font-family: "SFUIDisplay-Regular";
+    letter-spacing: 3px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: black;
+    margin-left: 20px;
+    font-size: 0.7em;
+    opacity: 1;
+    height: 30px;
+    top: 35%;
+    outline: none;
+    padding: 0 10px 0 10px;
+    margin-right: 20px;
+}
+
+#signup {
+    position: absolute;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 0.7em;
+    background: transparent;
+    /*border          : 2px red;*/
+    /*background      : var(--subtlered);*/
+    left: 10%;
+    border: none;
+    cursor: pointer;
+    z-index: 999;
+
+}
+
+#signup:hover {
+    border-bottom: 2px solid var(--subtlered);
+}
+
+#marketplacelink {
+    position: absolute;
+    background: transparent;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 0.7em;
+    border: none;
+    cursor: pointer;
+}
+
+#userpic {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 200px;
+    background-size: cover;
+    right: 10%;
+    top: 20%;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+#username {
+    position: absolute;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 0.7em;
+    background: transparent;
+    /*border          : 2px red;*/
+    /*background      : var(--subtlered);*/
+    top: 30%;
+    right: 13%;
+    border: none;
+    cursor: pointer;
+    z-index: 999;
+}
+
+#username:hover {
+    border-bottom: 2px solid var(--subtlered);
+}
+
+#marketplacelink:hover {
+    border-bottom: 2px solid var(--subtlered);
+}
+
+#searchbar {
+    position: absolute;
+    top: 34%;
+    left: 18%;
+    text-transform: uppercase;
+    font-size: 0.83em;
+    height: 30px;
+    font-weight: lighter;
+    background-color: transparent;
+    color: white;
+    border: none;
+    width: 0px;
+    margin-right: 30px;
+    -webkit-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+    z-index: 90;
+    padding: 0 0 0 40px;
+    cursor: pointer;
+}
+
+#searchbar:focus {
+    width: 200px;
+    /*outline-color:var(--pinkish);*/
+    /*outline-width:2px;*/
+    outline: none;
+    border: solid 1px var(--subtlered);
+}
+
+#searchicon {
+    position: absolute;
+    top: 37%;
+    left: 18%;
+    height: 25px;
+    width: 25px;
+    margin-left: 5px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+#logo {
+    cursor: pointer;
+    position: absolute;
+    display: inline-block;
+    left: 3%;
+    top: 20%;
+    height: 55px;
+    width: 60px;
+    /*height   : 70px;*/
+    /*width    : 80px;*/
+    z-index: 999;
+    overflow: hidden;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /*background: rgba(59, 62, 67, 0.7);*/
+}
+
+#details {
+    position: relative;
+    top: 11.6%;
+    width: 100%;
+    height: 87.8%;
+    /*box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);*/
+
+    /*background: rgba(232, 232, 232, 1);*/
+    background: #fafafa
+}
+
+#profilepicture {
+    position: absolute;
+    top: 8%;
+    left: 3%;
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    border-radius: 200px;
+    object-fit: cover;
+    background-color: white;
+    background-image: url("../Resources/person.png");
+    background-size: cover;
+    cursor: pointer;
+}
+
+#profilepicture:hover {
+    opacity: 0.7;
+}
+
+#savebutton {
+    position: absolute;
+    top: 38%;
+    left: 20.2%;
+    font-family: "SFUIDisplay-Regular";
+    font-size: 0.8em;
+    color: var(--subtlered);
+    background-color: transparent;
+    border: 1px solid var(--subtlered);
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    opacity: 0.9;
+    z-index: 99;
+    outline: none;
+    cursor: pointer;
+
+}
+
+#savebutton:hover {
+    border: 1px solid var(--darkgray);
+    color: var(--darkgray);
+}
+
+#error {
+    position: absolute;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-family: SFUIDisplay-Regular;
+    top: 36.8%;
+    left: 30%;
+    color: black;
+}
+
+#name {
+    font-family: "SFUIDisplay-Bold";
+    position: absolute;
+    top: 12%;
+    left: 20%;
+    font-size: 2em;
+    color: black;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    width: auto;
+}
+
+#name::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: black;
+}
+
+#joindate {
+    position: absolute;
+    font-size: 0.8em;
+    left: 20%;
+    top: 16%;
+    color: gray;
+}
+
+#contactnumber::-webkit-input-placeholder, #email::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: var(--subtlered);
+}
+
+#contactnumber {
+    font-family: SFUIDisplay-Thin;
+    position: absolute;
+    left: 20%;
+    top: 24%;
+    color: black;
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+}
+
+#email {
+    font-family: SFUIDisplay-Thin;
+    position: absolute;
+    left: 20%;
+    top: 29%;
+    color: var(--darkgray);
+    font-size: 1.2em;
+    border: none;
+    width: 300px;
+    outline: none;
+    background-color: transparent;
+}
+
+#email:focus, #contactnumber:focus, #name:focus {
+    border: 1px solid black;
+}
+
+#descriptionlabel {
+    position: absolute;
+    left: 5%;
+    top: 45%;
+    color: black;
+    font-size: 1.2em;
+    font-family: SFUIDisplay-Regular;
+
+}
+#nooffer{
+    position: absolute;
+    left: 5%;
+    top: 65%;
+    color: black;
+    font-size: 2em;
+    background-color: transparent;
+    font-family: SFUIDisplay-Regular;
+}
+
+#label {
+    text-transform: uppercase;
+    width: 98.5%;
+    position: absolute;
+    text-align: center;
+    font-size: 1.3em;
+    left: 0%;
+    height: 40px;
+    top: 35.5%;
+    padding-top: 10px;
+    padding-left: 20px;
+    color: var(--pastelblue);
+    /*background: rgba(59, 62, 67, 0.7);*/
+    background-color: black;
+
+}
+
+#recentposts {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+    background-color: transparent;
+    left: 50%;
+    overflow: scroll;
+}
+
+.post {
+    /* Add shadows to create the "card" effect */
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+    /*box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);*/
+    transition: 0.3s;
+    height: 240px;
+    width: 630px;
+    background-color: transparent;
+    cursor: pointer;
+    left: 5.5%;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+/* On mouse-over, add a deeper shadow */
+.post:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.7);
+}
+
+.postinfo {
+    height: 37px;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid lightgray;
+
+}
+
+.userposticon {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 200px;
+    background-size: cover;
+    object-fit: cover;
+    left: 2%;
+    top: 10%;
+
+}
+
+.username {
+    font-family: "SFUIDisplay-Bold";
+    position: absolute;
+    font-size: 1em;
+    color: black;
+    left: 15%;
+    top: 15%;
+
+}
+
+.postinfo p {
+    font-family: "SFUIDisplay-Bold";
+    display: inline-block;
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 0.6em;
+    color: black;
+    left: 15%;
+    top: 22%;
+
+}
+
+.itemdescription {
+    font-family: "SFUIDisplay-Regular";
+    display: inline-block;
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 0.8em;
+    left: 10%;
+    top: 30%;
+    color: black;
+    z-index:2;
+}
+
+.tradedescription {
+    font-family: "SFUIDisplay-Regular";
+    display: inline-block;
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 0.8em;
+    left: 31%;
+    top: 30%;
+    color: black;
+    z-index:2;
+
+}
+
+
+.text2 {
+    position: absolute;
+    font-family: "SFUIDisplay-Thin";
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    left: 19.5%;
+    top: 30%;
+    color: black;
+    z-index:2;
+}
+
+.makeoffer {
+    left: 9%;
+    bottom: 15%;
+}
+
+.tradeitem {
+    position: absolute;
+    height: 200px;
+    width: 315px;
+    left: 0%;
+    bottom:0;
+    border-radius: 0 0 0 5px;
+    background-size: cover;
+    object-fit: cover;
+
+}
+
+.receivingitem {
+    position: absolute;
+    height: 200px;
+    width: 315px;
+    right: 0%;
+    bottom:0;
+    /*border-radius: 500px;*/
+    background-image: url('../Resources/signupBG4.jpeg');
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 0 0 5px 0;
+
+}
+
+.arrows {
+    position: absolute;
+    height: 40px;
+    width: 60px;
+    top: 35%;
+    left: 43%;
+    opacity: 0.8;
+    background-color: rgba(256,256,256,0.4);
+    border-radius: 500px;
+    padding: 10px;
+
+}
+
+#usersettings {
+    position: absolute;
+    top: 11.5%;
+    right: 5px;
+    border-radius: 5px;
+    background-color: rgba(232, 232, 232, 0.7);
+    width: 150px;
+    height: 90px;
+    z-index: 999;
+    display: none;
+}
+
+#wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#profile {
+
+    position: absolute;
+    color: #fafafa;
+    top: 10px;
+    left: 10%;
+    width: 120px;
+    height: 30px;
+    background: var(--subtlered);
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 0.8em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#logout {
+    position: absolute;
+    top: 50px;
+    left: 10%;
+    width: 120px;
+    height: 30px;
+    background: var(--subtlered);
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 0.8em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fafafa;
+}
+
+#profile:hover, #logout:hover {
+    color: white;
+    background-color:var(--hoverred);
+}
+
+#modaldiv {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+#modalcontent {
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+    /*background-image           : url("../Resources/signupBG3.jpg");*/
+    background-size: cover;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 2px;
+    height: 280px;
+    width: 500px; /* Could be more or less, depending on screen size */
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    min-width: 319px;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+#modalcontainer {
+    position: relative;
+    /*background-color: rgba(0, 0, 0, 0.9);*/
+    height: 100%;
+    width: 100%;
+    margin: auto;
+
+}
+
+#close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 2px 5px 2px 5px;
+    z-index: 99999;
+
+}
+
+#close:hover,
+#close:focus {
+    color: var(--subtlered);
+    text-decoration: none;
+    cursor: pointer;
+
+
+}
+
+#preview {
+    position: absolute;
+    object-fit: cover;
+    top: 15%;
+    left: 3%;
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+    background-size: cover;
+    cursor: pointer;
+
+}
+
+#image {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    font-size: 0.8em;
+    padding: 10px 10px 10px 10px;
+    color: black;
+    outline: none;
+
+}
+
+#modalcontainer {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-color: #fafafa
+
+}
+
+#uploadbutton {
+    background-color: var(--subtlered);
+    position: absolute;
+    bottom: 40%;
+    left: 54%;
+    width: 150px;
+    font-family: "SFUIDisplay-Thin";
+    font-size: 0.8em;
+    color: white;
+    border: none;
+    height: 25px;
+    border-radius: 5px;
+    opacity: 0.9;
+    z-index: 99;
+    outline: none;
+    cursor: pointer;
+}
+
+#uploadbutton:hover {
+    background-color: rgba(256, 256, 256, 0.8);
+    color: black;
+}
+#nopost{
+    position: absolute;
+    top:35%;
+    right: 15%;
+    font-size: 2em;
+    color: rgba(0,0,0,0.3);
+    font-family:SFUIDisplay-Thin;
+    background-color: transparent;
+}
+#postlabel{
+    position: absolute;
+    right: 40%;
+    top: 5%;
+    color: black;
+    font-size: 1.2em;
+    font-family: SFUIDisplay-Regular;
+}
+#offers{
+    position: fixed;
+    top: 60%;
+    left: 5%;
+    width: 550px;
+    height: 250px;
+    background-color: transparent;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+
+}
+#offercontainer{
+    position: relative;
+    height:100%;
+    width:100%;
+    /*background-color: rgba(6,6,6,0.9);*/
+    overflow: scroll;
+}
+.idtag {
+    display: none;
+}
+.authors{
+    color: white;
+}
+.useroffers{
+    color: white;
+    margin-top: 5px;
+}
+.offer{
+    position: relative;
+    height: 40px;
+    width: 80%;
+    cursor: pointer;
+    border-left: 2px solid black;
+    top: 5%;
+    z-index: 9999999;
+
+}
+.offer:hover{
+    background-color: rgba(0,0,0,0.2);
+}
+.offer_user_image{
+    position: absolute;
+    border-radius: 500px;
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+    top: 12%;
+    left: 5%;
+}
+.offername{
+    position: relative;
+    display: inline-block;
+    color: var(--darkgray);
+    left: 17%;
+    font-family: SFUIDisplay-Bold;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+.offertext{
+    position: relative;
+    display: inline-block;
+    color: black;
+    left: 22%;
+    font-size: 0.8em;
+
+}
+.offer:hover{
+    border-left: 2px solid var(--subtlered)
+}
+.offerpk{
+    display:none;
+}
+#offermodaldiv {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+#offermodalcontent {
+    position: relative;
+    background-color: #fafafa;
+    border-radius: 5px;
+    /*background-image           : url("../Resources/signupBG3.jpg");*/
+    background-size: cover;
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 2px;
+    height: 350px;
+    width: 600px; /* Could be more or less, depending on screen size */
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    min-width: 319px;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+#offermodalcontainer {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    height: 100%;
+    width: 100%;
+    margin: auto;
+
+}
+
+#close2 {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 2px 5px 2px 5px;
+    z-index: 99999;
+
+}
+#close2:hover,
+#close2:focus {
+    color: var(--subtlered);
+    text-decoration: none;
+    cursor: pointer;
+}
+#infodiv{
+    position: absolute;
+    height: 90px;
+    width: 100%;
+    background-color: rgba(0,0,0,0);
+    left:0;
+    top:0;
+    border-bottom: 1px solid rgba(0,0,0,.0975);
+}
+#infodivwrapper{
+    position: relative;
+    height: 100%;
+    width:100%;
+}
+#offermodaluserimage{
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    background-color:black;
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+#offermodalusername{
+    position:absolute;
+    font-family: SFUIDisplay-Regular;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    top: 10%;
+    left: 20%;
+}
+#offermodalcontactnumber{
+    position:absolute;
+    font-family: SFUIDisplay-Thin;
+    font-size: 0.8em;
+    top: 30%;
+    left: 20%;
+}
+#offermodalemail{
+    position:absolute;
+    font-family: SFUIDisplay-Thin;
+    font-size: 0.8em;
+    top: 50%;
+    left: 20%;
+}
+#offermodalimage{
+    position: absolute;
+    height: 255px;
+    width: 300px;
+    left: 0;
+    bottom:0;
+    object-fit: cover;
+}
+#offermodalitemname{
+    position:absolute;
+    right: 20%;
+    top: 30%;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-family: SFUIDisplay-Regular;
+}
+#offermodaldescription{
+    position:absolute;
+    right: 3.5%;
+    bottom: 5%;
+    height: 150px;
+    width: 250px;
+    font-size: 0.8em;
+    font-family: SFUIDisplay-Thin;
+    border: 1px solid rgba(0,0,0,.0975);
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+}
+
+#emptytext{
+    position: absolute;
+    top:35%;
+    right: 30%;
+    font-size: 1em;
+    color: rgba(0,0,0,0.3);
+    font-family:SFUIDisplay-Thin;
+    background-color: transparent;
+}
+.postdate{
+    position: absolute;
+    right: 5%;
+    top: 28%;
+    color: gray;
+    font-size: 0.8em;
+    font-family: SFUIDisplay-Thin;
+
+}
+
+
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+
+    <script type="text/javascript" src="{% static "Scripts/jquery-3.1.1.js" %}">
+    </script>
+    <script type="text/javascript" src="{% static "Scripts/signup.js" %}">
+    </script>
+    <script type="text/javascript" src="{% static "Scripts/cookie.js" %}">
+    </script>
+    <link rel="stylesheet" type="text/css" href="{% static "Stylesheets/signup.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "Stylesheets/ColorsFonts.css" %}">
+
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+
+</head>
+<body>
+
+<div id="body overlay"></div>
+
+<div id="signup-container">
+    <a href="/home"><img src="{% static "Resources/Logo7.png" %}" id="logo"></a>
+    <p id="p1"> Create Account </p>
+    <p id="errormsg"></p>
+
+    <script>
+        const createUserURL = "{% url 'create_user' %}";
+
+    </script>
+
+    <div>
+
+        {%  csrf_token %}
+        <p class="label" id="l1"> Name: </p>
+        <input type="text" class="textbox" id="name"><br>
+
+        <p class="label" id="l2"> Username: </p>
+        <input type="text" class="textbox" id="username"><br>
+
+        <p class="label" id="l3"> Password: </p>
+        <input type="password" class="textbox" id="password"><br>
+
+        <p class="label" id="l4"> Confirm Password: </p>
+        <input type="password" class="textbox" id="confirm"><br>
+
+{#        <input type="submit" value="Sign Up" id="signupbutton">#}
+        <button id="signupbutton">Sign Up</button>
+
+        <div id="separator"></div>
+    </div>
+
+    <div id="signup-description">
+        <p id="p2">Get Started in Bartr</p>
+        <p id="p3">Transact to your heart's content</p>
+
+        <ul>
+            <li>Free</li>
+            <li>Easy</li>
+            <li>Customizable</li>
+        </ul>
+
+
+    </div>
+</div>
+
+
+</body>
+</html>
+

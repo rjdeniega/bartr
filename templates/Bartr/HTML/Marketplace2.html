@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marketplace</title>
+
+    {% load staticfiles %}
+
+    <script type="text/javascript" src="{% static "Scripts/jquery-3.1.1.js" %}">
+    </script>
+    <script type="text/javascript" src="{% static "Scripts/cookie.js" %}">
+    </script>
+    <script type="text/javascript" src="{% static "Scripts/marketplace.js" %}">
+    </script>
+    <link rel="stylesheet" type="text/css" href="{% static "Stylesheets/ColorsFonts.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "Stylesheets/marketplace2.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "Stylesheets/loadingAnimation.css" %}">
+    {% if stylesheet == "tile" %}
+        <link rel="stylesheet" id="tilestyle" type="text/css" href="{% static "Stylesheets/tileVersion.css" %}">
+    {% else %}
+        <link rel="stylesheet" id="liststyle" type="text/css" href="{% static "Stylesheets/listVersion.css" %}">
+    {% endif %}
+
+
+
+    {#    <link rel="stylesheet" id="tilestyle" type="text/css" href="{% static "Stylesheets/tileVersion.css"  %}">#}
+    {#    <link rel="stylesheet" id="liststyle" type="text/css" href="{% static "Stylesheets/listVersion.css"  %}">#}
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--<link rel="stylesheet" href="../Stylesheets/tileStyle2.css">-->
+    <!--<link rel="stylesheet" href="../Stylesheets/listVersion.css">-->
+    <!--<link rel="stylesheet" href="../Stylesheets/listStyle2.css">-->
+
+</head>
+<body>
+
+
+<!--<div id="loader-wrapper">-->
+<!--<div id="loader"></div>-->
+</div>
+
+
+<div id="bodyoverlay"></div>
+<div id="modaldiv">
+    <div id="modalcontent">
+        <div id="close">&times;</div>
+        <div id="container">
+            <div id="trade">
+                <img src="{% static "Resources/leather.jpeg" %}" id="tradepreview">
+                <input type="file" id="tradeimage">
+                <p class="label" id="categorylabel"> categories: </p>
+                <select id="categorydropdown">
+                    {% for category in categories %}
+                        <option>{{ category.name }}</option>
+                    {% endfor %}
+                </select>
+                <p class="label" id="requestlabel3">request description:</p>
+                <p id="tradelabel" class="label">my item:</p>
+
+                <input type="text" id="tradename" placeholder="your item name">
+                <textarea rows="5" cols="50" id="description"></textarea>
+            </div>
+            <div id="receive">
+                <img src="{% static "Resources/laptop4.jpg" %}" id="receivepreview">
+                <input type="file" id="receiveimage">
+                <p id="receivelabel" class="label">trade item for:</p>
+                <input type="text" id="receivename" placeholder="trading for item name">
+                <p id="error"></p>
+                <button id="submitpost">Submit Post</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="offermodaldiv">
+    <div id="offermodalcontent">
+        <div id="offercontainer">
+            <div id="offertrade">
+                <div id="infodiv">
+                    <div id="infodivwrapper">
+                        <img id="offermodaluserimage" src={% static "Resources/sample.jpg" %}>
+                        <p id="offermodalusername">Jason Deniega</p>
+                        <p id="offertext"> wants to trade his</p>
+                        <p id="postitemname">This item</p>
+
+                    </div>
+                </div>
+                <img src="{% static "Resources/leather.jpeg" %}" id="postimage">
+                {#                <p id="categorylabel2" class="label">category:</p>#}
+                {#                <p id="postcategory">This category</p>#}
+                <p class="label" id="requestlabel">ideal trade description:</p>
+
+                <textarea rows="5" cols="50" id="postdescription"></textarea>
+{#                <img src="{% static "Resources/leather.jpeg" %}" id="postimagesample">#}
+
+            </div>
+            <div id="offerreceive">
+                <img src="" id="offerpreview">
+                <input type="file" id="offerimage">
+                <p id="text2" class="label">YOUR OFFER</p>
+
+                <p id="receivelabel2" class="label">your item description:</p>
+                <input type="text" id="offername" placeholder="your item name">
+                <textarea rows="5" cols="50" id="offerdescription"></textarea>
+
+            </div>
+            <div id="bottomdiv">
+                <p id="error2"></p>
+
+                <button id="close2">Cancel</button>
+                <button id="submitoffer">Make Offer</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="navBar">
+    <div class="contents">
+        <nav>
+            <button id="marketplacelink"> Marketplace</button>
+            <p id="desc"> | trading made easy</p>
+            <img src="{% static "Resources/searchicon.png" %}" id="searchicon">
+            <input type="text" id="searchbar">
+
+            {% if profile_picture %}
+                <img id="userpic" src="{{ profile_picture.url }}">
+            {% else %}
+                <img src="{% static "Resources/personwhite.png" %}" id="userpic">
+            {% endif %}
+
+            <a href="/profile">
+                <button id="username" class="link">{{ user }}</button>
+            </a>
+
+        </nav>
+    </div>
+    <div id="separator"></div>
+    <a href="/home"><img src="{% static "Resources/fullred.png" %}" id="logo"></a>
+
+</div>
+
+<div id=usersettings>
+    <div id="wrapper">
+        <a href="/profile">
+            <button id="profile"> User Profile</button>
+        </a>
+        <a href="/log_out">
+            <button id="logout"> Log Out</button>
+        </a>
+    </div>
+</div>
+
+<div id="sidebar">
+    <div id="createpost">Create Post</div>
+    {#    <p id="views"> Views </p>#}
+    {#    <div id="bg">#}
+    {#        <img src="{% static "Resources/list2.png" %}" id="listicon">#}
+    {#        <img src="{% static "Resources/tiles2.png" %}" id="tilesicon">#}
+    {#    </div>#}
+    <p id=categories> Categories </p>
+
+    <div id="buttons">
+        <div class="buttons">
+            <img src="{% static "Resources/clothes.png" %}" class="icons" id="clothingicon">
+            <button id="clothing">Clothing</button>
+        </div>
+        <div class="buttons">
+            <img src="{% static "Resources/gadgets.png" %}" class="icons" id="gadgeticon">
+            <button id="gadgets">Gadgets</button>
+        </div>
+        <div class="buttons">
+            <img src="{% static "Resources/car.png" %}" class="icons" id="vehiclesicon">
+            <button id="vehicles">Vehicles</button>
+        </div>
+        <div class="buttons">
+            <img src="{% static "Resources/collectibles.png" %}" class="icons" id="collectiblesicon">
+            <button id="collectibles">Collectibles</button>
+        </div>
+        <div class="buttons">
+            <img src="{% static "Resources/gaming2.png" %}" class="icons" id="gamingicon">
+            <button id="gaming">Gaming</button>
+        </div>
+        <div class="buttons">
+            <img src="{% static "Resources/others.png" %}" class="icons" id="othersicon">
+            <button id="others">Others</button>
+        </div>
+
+    </div>
+
+</div>
+
+<div id="maincontainer">
+    <div id="postdiv">
+        {% for post in posts %}
+            <div class="post">
+                <input type="text" class="idtag" value="{{ post.pk }}">
+                <div class="userinfo">
+
+                    {% if post.author.profile.profile_picture %}
+                        <img src="{{ post.author.profile.profile_picture.url }}" class="userposticon">
+                    {% else %}
+                        <img src="{% static "Resources/personwhite.png" %}" class="userposticon">
+                    {% endif %}
+
+                    <div class="username">{{ post.author.first_name }}</div>
+
+                    <p>{{ post.date_submitted.isoformat }}</p>
+
+                </div>
+                <div class="postinfo">
+
+                    <div class="itemdescription">{{ post.trade_item_name }}</div>
+                    <div class="text2">for</div>
+                    <div class="tradedescription">{{ post.receive_item_name }}</div>
+                    <button class="makeoffer">Make Offer</button>
+
+                </div>
+                <img src="{{ post.trade_item.url }}" class="tradeitem">
+                <img src="{{ post.receive_item.url }}" class="receivingitem">
+                {#                <img src="{% static "Resources/arrowwhite.png" %}" class="arrows">#}
+
+            </div>
+
+        {% endfor %}
+    </div>
+    {#<script>#}
+    {#    $(document).ready(function(){#}
+    {#        $(".post").click(function(){#}
+    {#            console.log($(this).find($(".idtag")).val())#}
+    {#        });#}
+    {#    })#}
+    {#</script>#}
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    {% load staticfiles %}
+
+    <script type="text/javascript" src="{% static "Scripts/jquery-3.1.1.js" %}">
+    </script>
+    <script type="text/javascript" src="{% static "Scripts/profile.js" %}">
+    </script>
+    <link rel="stylesheet" type="text/css" href="{% static "Stylesheets/ColorsFonts.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "Stylesheets/profile.css" %}">
+    <script type="text/javascript" src="{% static "Scripts/cookie.js" %}">
+    </script>
+
+</head>
+
+<body>
+
+<div id="modaldiv">
+    <div id="modalcontent">
+        <div id="modalcontainer">
+            <div id="close">&times;</div>
+            {% csrf_token %}
+            {% if profile_picture %}
+                <img id="preview" src="{{ profile_picture.url }}">
+            {% else %}
+                <img id="preview" src={% static "Resources/personwhite.png" %}>
+            {% endif %}
+            <input type="file" id="image">
+            <button id="uploadbutton">Save</button>
+        </div>
+    </div>
+</div>
+<div id="offermodaldiv">
+    <div id="offermodalcontent">
+        <div id="offermodalcontainer">
+            <div id="close2">&times;</div>
+            <div id="infodiv">
+                <div id="infodivwrapper">
+                    <img id="offermodaluserimage" src={% static "Resources/sample.jpg" %}>
+                    <p id="offermodalusername"></p>
+                    <p id="offermodalcontactnumber"></p>
+                    <p id="offermodalemail"></p>
+                </div>
+            </div>
+            <img id="offermodalimage" src={% static "Resources/laptop4.jpg" %}>
+            <p id="offermodalitemname">Laptop</p>
+            <p id="offermodaldescription"> this item us ausdiasdadasfkasuda  </p>
+
+        </div>
+    </div>
+</div>
+<div id="bodyoverlay"></div>
+
+<div id="navBar">
+    <div class="contents">
+        <nav>
+            <a href="/marketplace">
+                <button id="marketplacelink"> Marketplace</button>
+            </a>
+            {% if profile_picture %}
+                <img id="userpic" src="{{ profile_picture.url }}">
+            {% else %}
+                <img src="{% static "Resources/personwhite.png" %}" id="userpic">
+            {% endif %}
+            <button id="username" class="link">{{ user }}</button>
+
+        </nav>
+    </div>
+    <div id="separator"></div>
+    <a href="/home"><img src="{% static "Resources/fullred.png" %}" id="logo"></a>
+</div>
+
+<div id=usersettings>
+    <div id="wrapper">
+        <a href="/profile">
+            <button id="profile"> User Profile</button>
+        </a>
+        <a href="/log_out">
+            <button id="logout"> Log Out</button>
+        </a>
+    </div>
+</div>
+
+<div id="container">
+    <div id="details">
+        {% if profile_picture %}
+            <img id="profilepicture" src="{{ profile_picture.url }}">
+        {% else %}
+            <img src="{% static "Resources/person.png" %}" id="profilepicture">
+        {% endif %}
+
+
+        <button id="savebutton">Save</button>
+        <p id="error"></p>
+        <input type="text" class="textbox" id="name" value="{{ user }}">
+        {#        <p id="name">{{ user.first_name }}</p>#}
+        <p id="joindate">Joined {{ date_joined }}  </p>
+        <input type="text" class="textbox" id="contactnumber" placeholder="Enter contact number"
+               value="{{ contact_number }}">
+        <input type="text" class="textbox" id="email" placeholder="Enter email address" value="{{ email }}">
+        <p id="descriptionlabel">Offers: </p>
+        {#        <p id="nooffer">This post has no offers</p>#}
+
+
+        <div id="recentposts">
+
+            {% if posts %}
+                {% for post in posts %}
+
+                    <div class="post">
+                        <input type="text" class="idtag" value="{{ post.pk }}">
+                        <div class="postinfo">
+                            {% if post.author.profile.profile_picture %}
+                                <img src="{{ post.author.profile.profile_picture.url }}" class="userposticon">
+                            {% else %}
+                                <img src="{% static "Resources/personwhite.png" %}" class="userposticon">
+                            {% endif %}
+                            <div class="itemdescription">{{ post.trade_item_name }}</div>
+                            <div class="text2">FOR</div>
+                            <div class="tradedescription">{{ post.receive_item_name }}</div>
+                            <div class="postdate">posted on {{ post.date_submitted }}</div>
+
+                        </div>
+                        <img src="{{ post.trade_item.url }}" class="tradeitem">
+                        <img src="{{ post.receive_item.url }}" class="receivingitem">
+{#                        <img src="{% static "Resources/arrowwhite.png" %}" class="arrows">#}
+
+                    </div>
+
+                {% endfor %}
+            {% else %}
+                <p id="postlabel">User's Posts:</p>
+                <p id="nopost">You have no posts yet</p>
+            {% endif %}
+        </div>
+
+    </div>
+
+    <div id="offers">
+        <div id="offercontainer">
+                <p id="emptytext"> please select a post to view its offers</p>
+        </div>
+    </div>
+
+
+</div>
+</div>
+
+</body>
+</html>

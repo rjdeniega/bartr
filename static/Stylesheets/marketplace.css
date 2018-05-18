@@ -1,0 +1,232 @@
+#navBar {
+    /*background-color: rgba(40, 44, 53, 0.9);*/
+    background-color: rgba(0, 0, 0, 0.3);
+    /*background:-webkit-linear-gradient(left,rgba(40,44,53,1) ,rgba(59,62,67,0.5) );*/
+    position: fixed;
+    text-align: right;
+    top: 0;
+    left: 0;
+    right: 0;
+    /*background-color:#3b3e43;*/
+    width: 100%;
+    height: 50px;
+    z-index: 50;
+    min-width:1000px;
+}
+body{
+    background: url('../Resources/landscape.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    width: auto;
+    min-width: 1300px;
+    min-height: 1000px;
+}
+#bodyoverlay{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    /*background: -webkit-linear-gradient(left, var(--pastelblue), var(--red));*/
+    background: var(--subtlered);
+    opacity: 0.7;
+    z-index: -999;
+}
+#separator2 {
+    width: 100%;
+    height: 2px;
+    top: 6.8%;
+    /*background: -webkit-linear-gradient(left, var(--pastelblue), var(--red));*/
+    background: var(--red);
+    z-index: 2;
+    /*box-shadow: 0px 2px 2px #888888;*/
+
+}
+#contents{
+    top:0%;
+    position: relative;
+    height:100%;
+    width: 100%;
+}
+#welcomediv{
+    position: relative;
+    display:block;
+    height: 400px;
+    background: url("../Resources/laptop4.jpg");
+    background-color: rgba(0,0,0,0.7);
+    background-size: cover;
+    width:100%
+}
+#greetings{
+
+    position: relative;
+    top:20%;
+    left: 10%;
+    width: 80%;
+    height: 200px;
+    background-color: transparent;
+}
+#p1{
+    font-family: "SFUIDisplay-Bold";
+    position: absolute;
+    font-size: 4em;
+    color: white;
+    left: 12%;
+    top: -20%;
+
+}
+#p2{
+    font-family: "SFUIDisplay-Regular";
+    position: absolute;
+    font-size: 3em;
+    color: lightgray;
+    top: 23%;
+    left: 12%;
+    margin-left: 270px;
+}
+#p3{
+    font-family: "SFUIDisplay-Thin";
+    position: absolute;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+    top: 75%;
+    left: 5%;
+}
+#brands{
+    position: absolute;
+    top: 90%;
+    left:4%;
+    /*width:1257px;*/
+    width: 92.05%;
+    height: 83px;
+    background-color: var(--gray);
+    z-index:10;
+    overflow: hidden;
+
+}
+#tradepost-container{
+    position: relative;
+    margin-top: 5px;
+    height: 1000px;
+    width:100%;
+    background-color:rgba(59, 62, 67, 0.9);
+    overflow: hidden;
+}
+#main{
+    top: 5%;
+    position: relative;
+    width: 92%;
+    height: 90%;
+    left: 4%;
+    background-color: rgba(0,0,0,0.4)
+}
+
+#categories{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 5%;
+    top: 1%;
+    background-color: rgba(0,0,0,0.8);
+}
+#categories p{
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 1em;
+    color: var(--subtlered);
+    font-family: "SFUIDisplay-Regular";
+    left: 15%;
+
+}
+#categories ul{
+    position: relative;
+    width: 80%;
+    height: 45px;
+    left: 22%;
+    transform: translateY(-12%);
+}
+#categories li{
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 90px;
+    margin-right: 20px;
+    padding: 3px 0px 3px 0;
+    border-bottom: 2px solid var(--subtlered);
+    color: white;
+    cursor: pointer;
+
+}
+#categories li:hover{
+    border-bottom: 2px solid lightgray;
+    color: var(--subtlered)
+}
+.transactiondiv{
+    top: 2%;
+    position: relative;
+    display: inline-block;
+    width: 32.85%;
+    height: 92%;
+    margin-left: 3px;
+    background-color: rgba(256,256,256,0.8);
+
+}
+#buydiv{
+
+}
+#buyheader{
+
+    height: 10%;
+    width:100%;
+    background-color: var(--gray);
+
+}
+#buyheader p{
+    position: absolute;
+    font-size:3em;
+    color: white;
+    top: -4%;
+    left: 38%;
+    font-family: "SFUIDisplay-Thin";
+
+}
+#selldiv{
+
+}
+#sellheader{
+
+    height: 10%;
+    width:100%;
+    background-color: var(--gray);
+
+}
+#sellheader p{
+    position: absolute;
+    font-size:3em;
+    color: white;
+    top: -4%;
+    left: 38%;
+    font-family: "SFUIDisplay-Thin";
+
+}
+#tradeheader{
+
+    height: 10%;
+    width:100%;
+    background-color: var(--gray);
+
+}
+#tradeheader p{
+    position: absolute;
+    font-size:3em;
+    color: white;
+    top: -4%;
+    left: 38%;
+    font-family: "SFUIDisplay-Thin";
+
+}
+#tradediv{
+
+}
+

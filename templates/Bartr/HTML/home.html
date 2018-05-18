@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static "Stylesheets/ColorsFonts.css"  %}">
+    <link rel="stylesheet" type="text/css" href="{% static "Stylesheets/home.css"  %}">
+    <script type="text/javascript" src="{%static "Scripts/jquery-3.1.1.js"%}">
+    </script>
+    <script type="text/javascript" src="{%static "Scripts/home.js"%}">
+    </script>
+    <script type="text/javascript" src="{%static "Scripts/homeAnimations.js"%}">
+    </script>
+    <script type="text/javascript" src="{%static "aos-master/dist/aos.js"%}">
+    </script>
+     <script type="text/javascript" src="{%static "aos-master/src/js/aos.js"%}">
+    </script>
+    <script type="text/javascript" src="{% static "Scripts/cookie.js" %}">
+    </script>
+
+    <meta charset="UTF-8">
+    <title>Bartr Home</title>
+{#    <script src="../Scripts/jquery-3.1.1.js">#}
+{#    </script>#}
+{#    <link rel="stylesheet" href="../Stylesheets/ColorsFonts.css">#}
+{#    <link rel="stylesheet" href="../Stylesheets/home.css">#}
+{#    <script src="../Scripts/GeneralFX.js"></script>#}
+{#    <link rel="stylesheet" href="../aos-master/dist/aos.css">#}
+{#    <script src="../Scripts/home.js"></script>#}
+{#    <script src="../Scripts/homeAnimations.js"></script>#}
+{#    <script src="../aos-master/dist/aos.js"></script>#}
+{#    <script src="../aos-master/src/js/aos.js"></script>#}
+
+
+</head>
+<body>
+
+<div id="bodyoverlay"></div>
+
+<div id="modaldiv">
+    <div id="modalcontent">
+        <div id="close">&times;</div>
+        <div id="container">
+
+            <div id="headingcontainer">
+                <img src="{% static "Resources/fullred.png" %}" id="modallogo">
+                <p id="label">Bartr Login</p>
+            </div>
+                <p class="label" id="l2"> Username: </p>
+                <input type="text" class="textbox" id="username"><br>
+
+                <p class="label" id="l3"> Password: </p>
+                <input type="password" class="textbox" id="password"><br>
+
+                <button id="loginbutton">Log In</button>
+
+                <p class="label" id="error"></p>
+
+               <a href="/sign_up/"> <p id="createaccount">No account yet? Create one now for free</p> </a>
+
+        </div>
+    </div>
+</div>
+<div id="navBar">
+    <div class="contents">
+        <nav>
+            {% if user.profile is not None %}
+            <a href="/marketplace"><button id="marketplacelink"> Marketplace</button></a>
+            {% else %}
+            <a href="/sign_up"><button id="marketplacelink"> Marketplace</button></a>
+            {% endif %}
+
+            {% if user.profile is  None %}
+            <a href="/sign_up"><button id="signup">Sign Up</button></a>
+            {% endif %}
+            {% if user.profile.profile_picture%}
+                <a href="/profile/"><img id="userpic" src="{{ user.profile.profile_picture.url }}"></a>
+            {% else %}
+            <img src="{% static "Resources/personwhite.png" %}" id="userpic">
+            {% endif %}
+            {% if user.profile  is not None %}
+            <a href="/profile/"><button id="login2">Welcome, {{ user.first_name }}</button></a>
+            {% else %}
+            <button id="login">Log In</button>
+            {% endif %}
+{#            <button id="scroll">Unlock Scroll</button>#}
+
+        </nav>
+    </div>
+    <div id="separator"></div>
+    <a href=""><img src="{%static "Resources/fullred.png" %}" id="logo"></a>
+</div>
+
+{% if user.profile is not None %}
+<div id = usersettings>
+    <div id="wrapper">
+        <a href="/profile"><button id="profile"> User Profile</button></a>
+        <a href="/log_out"> <button id="logout"> Log Out</button></a>
+    </div>
+</div>
+{% endif %}
+
+
+<div id="header">
+    <button id="slider1"></button>
+    <button id="slider2"></button>
+    <button id="slider3"></button>
+    <button id="anchor"> Learn more</button>
+    <img src="{%static "Resources/arrowdown.png" %}" id="arrowdown">
+
+
+    <div id="slideshow1">
+        <img src="{%static "Resources/Background1.png"%}" id="background">
+        <a href="/sign_up"> <button id="getStartedButton"> Get Started</button></a>
+        <p id="heading">This is Bartr.</p>
+        <p id="subheading">Exchange Items, Exchange Cultures</p>
+    </div>
+
+    <div id="slideshow2">
+        <img src="{%static "Resources/Background2.jpg"%}" id="background2">
+        <p id="heading2">Relive Trading History.</p>
+        <p id="subheading2">Trade and Currency</p>
+    </div>
+
+    <div id="slideshow3">
+        <img src="{%static "Resources/Background3.jpg"%}" id="background3">
+        <p id="heading3">Explore Your Options.</p>
+        <p id="subheading3">The sky is the limit</p>
+    </div>
+</div>
+
+<!--<div id="separator-container">-->
+
+<!--<div id="separator2"></div>-->
+<!--<p id="more"> Learn more </p>-->
+<!--<img src="../Resources/downicon.png" id="downicon">-->
+<!--</div>-->
+
+
+<div id="boxes">
+
+    <div id="quad">
+        <img src="{%static "Resources/leather.jpeg"%}" id="box1">
+        <img src="{%static "Resources/fashion3.jpg"%}" id="box2">
+        <img src="{%static "Resources/shoes.jpg"%}" id="box3">
+        <img src="{%static "Resources/iphone.jpeg"%}" id="box4">
+    </div>
+
+
+    <p data-aos="fade-up" data-aos-offset="300" class="boxheading" id="buyheading"> Buy</p>
+    <p data-aos="fade-up" data-aos-offset="200" class="boxheading" id="sellheading"> Sell</p>
+    <p data-aos="fade-up" data-aos-offset="100" class="boxheading" id="tradeheading"> Trade</p>
+
+
+    <p data-aos="fade-up" data-aos-offset="250" class="boxsubheading" id="buysubheading">
+        Go with the current trends and acquire famous brands
+    </p>
+    <p data-aos="fade-up" data-aos-offset="150" class="boxsubheading" id="sellsubheading">
+        Sell your limited edition or second hand items for cash
+    </p>
+    <p data-aos="fade-up" data-aos-offset="50" class="boxsubheading" id="tradesubheading">
+        Trade your belongings with something of equal value
+    </p>
+
+    <button id="anchor2"> Get Involved</button>
+    <!--<img src="../Resources/arrowdown.png" id="arrowdown2" >-->
+</div>
+
+
+<div id="recentposts">
+    <div id="computercontainer">
+        <img src="{%static "Resources/computer4.png"%}" id="computer">
+        <img src="{%static "Resources/screenshot.png"%}" id="screenshot">
+    </div>
+    <p data-aos="fade-up" data-aos-offset="50" id="postheader"> Get Involved.</p>
+    <p data-aos="fade-up" data-aos-offset="100" id="postsubheader"> Experience it firsthand</p>
+    <a href="/marketplace/"><button data-aos="fade-up" data-aos-offset="150" id="marketplace">Go to Marketplace</button></a>
+
+</div>
+
+
+<div id="sponsordiv">
+    <p id="sponsors"> sponsors </p>
+    <img src="{%static "Resources/Logo7.png"%}" id="bottomlogo">;
+    <p id="copyright"> © Jason Deniega | All rights reserved™ </p>
+</div>
+
+
+</body>
+</html>

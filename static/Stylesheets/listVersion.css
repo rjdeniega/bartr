@@ -1,0 +1,168 @@
+
+.post {
+    /* Add shadows to create the "card" effect */
+    position         : relative;
+    display          : inline-block;
+    margin-top       : 15px;
+    box-shadow       : 0 4px 10px 0 rgba(0, 0, 0, 0.5);
+    transition       : 0.3s;
+    height           : 250px;
+    min-width            : 1000px;
+    background-color : rgba(0, 0, 0, 0.9);
+    cursor           : pointer;
+    border-radius    : 30px;
+    /*border: 2px solid gray;*/
+    left             : 5.5%;
+
+}
+
+/* On mouse-over, add a deeper shadow */
+/*.post:hover {*/
+/*box-shadow : 0 8px 16px 0 rgba(0, 0, 0, 0.7);*/
+/*}*/
+
+.postinfo {
+    height       : 100%;
+    width        : 35%;
+    /*background-color : rgba(0, 0, 0, 0.85);*/
+    border       : none;
+    border-right : 2px solid gray;
+
+}
+
+.userposticon {
+    position         : absolute;
+    background-image : url('../Resources/sample.jpg');
+    height           : 70px;
+    width            : 70px;
+    border-radius    : 200px;
+    background-size  : cover;
+    left             : 2%;
+    top              : 10%;
+
+}
+
+.username {
+    font-family    : "SFUIDisplay-Bold";
+    text-transform : uppercase;
+    position       : absolute;
+    font-size      : 1.5em;
+    color          : var(--subtlered);
+    left           : 10%;
+    top            : 15%;
+
+}
+
+.postinfo p {
+    font-family    : "SFUIDisplay-Bold";
+    display        : inline-block;
+    text-transform : uppercase;
+    position       : absolute;
+    font-size      : 0.8em;
+    color          : white;
+    left           : 10%;
+    top            : 22%;
+
+}
+
+.itemdescription {
+    font-family    : "SFUIDisplay-Thin";
+    display        : inline-block;
+    text-transform : uppercase;
+    position       : absolute;
+    font-size      : 1em;
+    left           : 5%;
+    top            : 50%;
+    color          : white;
+}
+
+.tradedescription {
+    font-family    : "SFUIDisplay-Thin";
+    display        : inline-block;
+    text-transform : uppercase;
+    position       : absolute;
+    font-size      : 1em;
+    left           : 21%;
+    top            : 50%;
+    color          : white;
+
+}
+
+.postinfo button {
+    position         : absolute;
+    font-family      : "SFUIDisplay-Thin";
+    font-size        : 1em;
+    border           : 2px solid var(--subtlered);
+    color            : var(--subtlered);
+    background-color : transparent;
+    width            : 150px;
+    height           : 30px;
+    border-radius    : 30px;
+    opacity          : 0.9;
+    z-index          : 99;
+    outline          : none;
+    cursor           : pointer;
+
+}
+
+.postinfo button:hover {
+    /*background-color : rgba(256, 256, 256, 0.8);*/
+    /*color            : black;*/
+    border : 1px solid white;
+    color  : white;
+
+}
+
+.text2 {
+    position       : absolute;
+    font-family    : "SFUIDisplay-Bold";
+    display        : inline-block;
+    text-transform : uppercase;
+    font-size      : 1em;
+    left           : 15%;
+    top            : 50%;
+    color          : white;
+}
+
+.makeoffer {
+    left   : 9%;
+    bottom : 15%;
+}
+
+#viewoffer {
+    left   : 10%;
+    bottom : 15%;
+}
+
+.tradeitem {
+    position         : absolute;
+    height           : 200px;
+    width            : 200px;
+    left             : 38%;
+    top              : 10%;
+    border-radius    : 500px;
+    background-image : url('../Resources/iphone.jpeg');
+    background-size  : cover;
+}
+
+.receivingitem {
+    position         : absolute;
+    height           : 200px;
+    width            : 200px;
+    left             : 75%;
+    top              : 10%;
+    border-radius    : 500px;
+    background-image : url('../Resources/iphone.jpeg');
+    background-size  : cover;
+
+}
+
+.arrows {
+    position : absolute;
+    height   : 50px;
+    width    : 70px;
+    top      : 38%;
+    left     : 63%;
+    opacity  : 0.7;
+
+}

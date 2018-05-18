@@ -1,0 +1,217 @@
+
+body {
+    font-family: "SFUIDisplay-Thin", "SF UI Display", "Helvetica Neue", -apple-system, BlinkMacSystemFont, sans-serif;
+    /*background-color:#e1e1e1;*/
+    /*background-image: url('../Resources/header-bg.png');*/
+    background: url('../Resources/signupBG3.jpg') no-repeat center center fixed black;
+    background-size: cover;
+    transition: background 2s;
+    margin: 0;
+    width: auto;
+    min-width: 1300px;
+    min-height: 500px;
+}
+
+#bodyoverlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0.8;
+    z-index: -999;
+}
+
+#signup-container {
+    position: relative;
+    left: 10%;
+    transform: translateY(20%);
+    height: 500px;
+    width: 100%;
+    /*background-color:rgba(59, 62, 67, 0.5)*/
+    background: transparent;
+}
+
+#logo {
+    position: absolute;
+    height: 125px;
+    width: 138px;
+    cursor: pointer;
+    z-index: 999;
+
+}
+
+#p1 {
+    top: 4%;
+    position: absolute;
+    left: 10%;
+    color: white;
+    font-family: "SFUIDisplay-Thin";
+    font-size: 1.5em;
+
+}
+
+#errormsg {
+
+    position: absolute;
+    top: 80%;
+    left: 0.2%;
+    color: var(--subtlered);
+    font-family: "SFUIDisplay-Thin";
+    font-size: 1em;
+
+}
+
+.label {
+    position: absolute;
+    font-size: 1em;
+    color: lightgray;
+    font-family: "SFUIDisplay-Thin"
+}
+
+.textbox {
+    font-family: "SFUIDisplay-Thin";
+    font-size: 13px;
+}
+
+.textbox:focus {
+
+    border-bottom-color: var(--subtleblue);
+}
+
+form {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+input[type="text"] {
+    position: absolute;
+    height: 25px;
+    width: 350px;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    color: white;
+    outline: none;
+
+}
+
+input[type="password"] {
+    position: absolute;
+    height: 25px;
+    width: 350px;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    color: white;
+    outline: none;
+}
+
+#l1 {
+    top: 20%;
+}
+
+#name {
+    top: 30%;
+}
+
+#l2 {
+    top: 35%
+}
+
+#username {
+    top: 45%
+}
+
+#l3 {
+    top: 50%
+}
+
+#password {
+    top: 60%
+}
+
+#l4 {
+    top: 65%
+}
+
+#confirm {
+    top: 75%
+}
+
+#signupbutton {
+    position: absolute;
+    font-family: "SFUIDisplay-Thin";
+    font-size: 20px;
+    color: white;
+    background-color: var(--subtleblue);
+    border: none;
+    width: 250px;
+    height: 40px;
+    border-radius: 30px;
+    opacity: 1;
+    outline: none;
+    top: 90%;
+    left: 4%;
+    cursor: pointer;
+}
+
+#signupbutton:hover {
+    background-color: var(--gray);
+    color: var(--subtleblue);
+}
+
+#separator {
+    position: absolute;
+    top: 0%;
+    left: 35%;
+    height: 500px;
+    width: 2px;
+    background-color: rgba(256, 256, 256, 0.5);
+}
+
+#signup-description {
+    position: absolute;
+    left: 40%;
+    top: 0%;
+    height: 500px;
+    width: 500px;
+}
+
+#p2 {
+    top: 5%;
+    position: absolute;
+    font-family: "SFUIDisplay-Bold";
+    font-size: 3.5em;
+    color: var(--subtleblue);
+}
+
+#p3 {
+    position: absolute;
+    top: 22%;
+    left: 2%;
+    font-size: 2em;
+    color: white;
+}
+
+li:before {
+    font-size: 2em;
+    content: '✓';
+    margin-left: -1em;
+    margin-right: 20px;
+    color: var(--subtleblue);
+
+}
+
+li {
+    color: white;
+    font-size: 1.5em;
+}
+
+ul {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    text-indent: 2px;
+    list-style: none outside;
+}

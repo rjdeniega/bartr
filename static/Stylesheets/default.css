@@ -1,0 +1,178 @@
+:root {
+    --pinkish     : rgba(237, 72, 124, 1);
+    --orange      : rgba(239, 140, 60, 1);
+    --ROgradient  : -webkit-linear-gradient(left, #ef923c, #2569d8);
+    --lightbl     : #2569d8;
+    --blu         : rgba(52, 138, 230, 1);
+    --pastelgreen : rgba(114, 234, 121, 1);
+    --pastelblue  : rgba(109, 151, 255, 1);
+    --gray        : rgba(59, 62, 67, 1);
+    --red         : rgba(255, 0, 71, 0.8);
+    --navBG       : rgba(40, 44, 53, 0.9);
+    --purple      : rgba(124, 37, 248, 1);
+    --subtleblue  : rgba(109, 151, 255, 0.9);
+
+}
+
+@font-face {
+    font-family : "SFUIDisplay-Bold";
+    src         : url("../Fonts/SFUIDisplay-Bold.ttf");
+}
+
+@font-face {
+    font-family : "SFUIDisplay-Thin";
+    src         : url("../Fonts/SFUIDisplay-Ultralight.ttf");
+}
+
+@font-face {
+    font-family : 'SFUIDisplay-Regular';
+    src         : url("../Fonts/SFUIDisplay-Semibold.ttf");
+}
+
+@font-face {
+    font-family : 'SFUIDisplay-Black';
+    src         : url("../Fonts/SFUIDisplay-Thin.ttf");
+}
+
+body {
+    font-family     : "SFUIDisplay-Thin", "SF UI Display", "Helvetica Neue", -apple-system, BlinkMacSystemFont, sans-serif;
+    /*background-color:#e1e1e1;*/
+    /*background-image: url('../Resources/header-bg.png');*/
+    background      : url('../Resources/landscape.jpg') no-repeat center center fixed;
+    background-size : cover;
+    margin          : 0;
+    width           : auto;
+    min-width       : 1300px;
+    min-height      : 500px;
+
+}
+
+#bodyoverlay {
+
+    position   : fixed;
+    top        : 0%;
+    height     : 100%;
+    width      : 100%;
+    background : -webkit-linear-gradient(left, var(--pastelblue), var(--red));
+    /*background: rgba(12,31,39,0.8);*/
+    opacity    : 0.9;
+    z-index    : -999;
+
+}
+
+#navBar {
+    /*background-color: rgba(40, 44, 53, 0.9);*/
+    background-color : rgba(0, 0, 0, 0.7);
+    /*background:-webkit-linear-gradient(left,rgba(40,44,53,1) ,rgba(59,62,67,0.5) );*/
+    position         : fixed;
+    text-align       : right;
+    top              : 0;
+    left             : 0;
+    right            : 0;
+    /*background-color:#3b3e43;*/
+    width            : 100%;
+    height           : 50px;
+    z-index          : 50;
+    min-width        : 1000px;
+}
+
+.contents {
+    position   : relative;
+    transform  : translateY(26%);
+    height     : 100%;
+    margin-top : 0;
+}
+
+.contents a {
+    text-decoration : none;
+    text-transform  : uppercase;
+    font-weight     : lighter;
+    color           : lightgray;
+    margin-top      : 0;
+    margin-left     : 10px;
+    margin-right    : 20px;
+    font-size       : 0.8em;
+    opacity         : 1;
+    height          : 100%;
+    padding         : 20px 10px 14px 15px;
+}
+
+.contents a:hover {
+    background-color : var(--gray);
+    color            : var(--pastelblue);
+}
+
+#searchbar {
+    text-transform     : uppercase;
+    font-size          : 0.83em;
+    height             : 30px;
+    font-weight        : lighter;
+    background-color   : transparent;
+    color              : white;
+    border             : none;
+    width              : 0;
+    margin-right       : 30px;
+    -webkit-transition : width 0.5s ease-in-out;
+    transition         : width 0.5s ease-in-out;
+    z-index            : 999;
+    padding            : 0 0 0 40px;
+}
+
+#searchbar:focus {
+    width   : 200px;
+    /*outline-color:var(--pinkish);*/
+    /*outline-width:2px;*/
+    outline : none;
+    border  : solid 1px rgba(237, 72, 124, 0.8);
+}
+
+#searchicon {
+    position    : absolute;
+    top         : 8%;
+    height      : 25px;
+    width       : 25px;
+    margin-left : 5px;
+}
+
+#homeicon {
+    position     : relative;
+    transform    : translateY(30%);
+    height       : 25px;
+    width        : 25px;
+    padding      : 20px 20px 10px 20px;
+    margin-right : 20px;
+}
+
+#homeicon:hover {
+    cursor           : pointer;
+    background-color : var(--gray);
+}
+
+#logo {
+    cursor   : pointer;
+    position : absolute;
+    display  : inline-block;
+    /*transform: translateX(-20%) translateY(-45.5%);*/
+    /*height:550%;*/
+    /*width: 30%;*/
+    /*z-index:999;*/
+    /*flex-shrink:0;*/
+    /*min-width:30%;*/
+    left     : 5%;
+    top      : -40%;
+    height   : 101px;
+    width    : 116px;
+    z-index  : 999;
+    /*transform: translateX(-20%) translateY(-38%);*/
+    overflow : hidden;
+
+}
+
+#separator {
+    width      : 100%;
+    height     : 2px;
+    top        : 6.8%;
+    background : -webkit-linear-gradient(left, var(--pastelblue), var(--red));
+    z-index    : 2;
+    /*box-shadow: 0px 2px 2px #888888;*/
+}

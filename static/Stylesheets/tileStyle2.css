@@ -1,0 +1,179 @@
+
+.post {
+    /* Add shadows to create the "card" effect */
+    position         : relative;
+    display          : inline-block;
+    margin-left      : 2px;
+    margin-top       : 2px;
+    /*box-shadow       : 0 2px 5px 0 rgba(0, 0, 0, 0.5);*/
+    transition       : 0.3s;
+    height           : 250px;
+    width            : 250px;
+    /*background-color : rgba(6,6,6,0.9);*/
+    background-color: white;
+    cursor           : pointer;
+    /*border-radius: 30px;*/
+    /*border : 1px solid gray;*/
+    transform: translateY(8%);
+    left: 5.5%;
+}
+
+/* On mouse-over, add a deeper shadow */
+.post:hover {
+    box-shadow : 0 8px 16px 0 rgba(0, 0, 0, 0.7);
+}
+
+.postinfo {
+    position         : absolute;
+    height           : 37%;
+    width            : 100%;
+    /*background-color : rgba(0, 0, 0, 0.5);*/
+    bottom           : 0;
+    border: none;
+    border-top: 2px solid gray;
+
+}
+
+.postinfo p {
+    font-family    : "SFUIDisplay-Bold";
+    display        : inline-block;
+    text-transform : uppercase;
+    position       : absolute;
+    font-size      : 0.8em;
+    color          : white;
+    left           : 0;
+    top            : 0;
+
+}
+
+.post:hover {
+    box-shadow : 0 8px 16px 0 rgba(0, 0, 0, 0.7);
+}
+
+.userposticon {
+    position         : absolute;
+    background-image : url('../Resources/sample.jpg');
+    height           : 30px;
+    width            : 30px;
+    border-radius    : 200px;
+    background-size  : cover;
+    left             : 15%;
+    bottom           : 65%;
+
+}
+
+.username {
+    font-family    : "SFUIDisplay-Bold";
+    text-transform : uppercase;
+    position       : absolute;
+    font-size      : 0.8em;
+    color          : var(--subtlered);
+    left           : 30%;
+    top            : 7%;
+
+}
+
+.postinfo button {
+    position         : absolute;
+    font-family      : "SFUIDisplay-Thin";
+    font-size        : 0.6em;
+    border           : 1px solid var(--subtlered);
+    color            : var(--subtlered);
+    background-color : transparent;
+    width            : 100px;
+    height           : 20px;
+    border-radius    : 30px;
+    opacity          : 0.9;
+    z-index          : 99;
+    outline          : none;
+    cursor           : pointer;
+}
+
+.postinfo button:hover {
+    background-color : rgba(256, 256, 256, 0.8);
+    color            : black;
+
+}
+
+.postinfo p {
+    font-family    : "SFUIDisplay-Bold";
+    display        : inline-block;
+    text-transform : uppercase;
+    position       : absolute;
+    font-size      : 0.7em;
+    color          : white;
+    left           : 30%;
+    top            : 8%;
+}
+
+.itemdescription {
+    font-family    : "SFUIDisplay-Thin";
+    display        : inline-block;
+    text-transform : uppercase;
+    position       : absolute;
+    font-size      : 0.7em;
+    left           : 10%;
+    top            : 40%;
+    color          : white;
+}
+
+.text2 {
+    position       : absolute;
+    font-family    : "SFUIDisplay-Bold";
+    display        : inline-block;
+    text-transform : uppercase;
+    font-size      : 0.7em;
+    left           : 45%;
+    top            : 40%;
+    color          : white;
+}
+
+.tradedescription {
+    font-family    : "SFUIDisplay-Thin";
+    display        : inline-block;
+    text-transform : uppercase;
+    position       : absolute;
+    font-size      : 0.7em;
+    left           : 70%;
+    top            : 40%;
+    color          : white;
+
+}
+
+.makeoffer {
+    left   : 30%;
+    bottom : 15%;
+}
+
+.tradeitem {
+    position         : absolute;
+    height           : 100px;
+    width            : 100px;
+    left             : 3%;
+    top              : 15%;
+    border-radius    : 500px;
+    background-image : url('../Resources/iphone.jpeg');
+    background-size  : cover;
+}
+
+.arrows {
+    position : absolute;
+    height   : 25px;
+    width    : 40px;
+    top      : 32.5%;
+    left     : 42.5%;
+    opacity  : 0.7;
+
+}
+
+.receivingitem {
+    position         : absolute;
+    height           : 100px;
+    width            : 100px;
+    left             : 57%;
+    top              : 15%;
+    border-radius    : 500px;
+    background-image : url('../Resources/iphone.jpeg');
+    background-size  : cover;
+
+}
